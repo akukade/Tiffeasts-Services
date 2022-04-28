@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <!--title layout -->
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="@color/black"
+            android:fontFamily="@font/ubuntu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sort and Filter"
+            android:textSize="25dp"
+            android:layout_margin="10dp"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        android:layout_below="@id/topLayout"
+        android:id="@+id/view1" />
+
+    <!--left layout -->
+    <RelativeLayout
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/leftLayout"
+        android:layout_below="@id/view1">
+
+        <Button
+            android:stateListAnimator="@anim/animation"
+            android:foreground="?attr/selectableItemBackground"
+            android:textAllCaps="false"
+            android:background="@drawable/custom_button"
+            android:textColor="@color/black"
+            android:fontFamily="@font/ubuntul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sortby"
+            android:text="Sort By"
+            android:layout_margin="5dp"
+            android:textSize="15dp" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_below="@id/sortby"
+            android:id="@+id/view2"
+            android:layout_margin="1dp"
+            android:background="#C0C0C0"/>
+
+        <Button
+            android:stateListAnimator="@anim/animation"
+            android:foreground="?attr/selectableItemBackground"
+            android:textAllCaps="false"
+            android:background="@drawable/custom_button"
+            android:textColor="@color/black"
+            android:fontFamily="@font/ubuntul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cuisinesort"
+            android:text="Cuisine"
+            android:layout_margin="5dp"
+            android:layout_below="@id/view2"
+            android:textSize="15dp" />
+
+
+        <View
+            android:layout_margin="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_below="@id/cuisinesort"
+            android:id="@+id/view3"
+            android:background="#C0C0C0"/>
+
+        <Button
+            android:stateListAnimator="@anim/animation"
+            android:foreground="?attr/selectableItemBackground"
+            android:textAllCaps="false"
+            android:background="@drawable/custom_button"
+            android:textColor="@color/black"
+            android:fontFamily="@font/ubuntul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/delivery"
+            android:layout_below="@+id/view3"
+            android:text="Delivery"
+            android:layout_margin="5dp"
+            android:textSize="15dp" />
+
+        <View
+            android:layout_margin="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_below="@id/delivery"
+            android:id="@+id/view4"
+            android:background="#C0C0C0"/>
+
+        <Button
+            android:stateListAnimator="@anim/animation"
+            android:foreground="?attr/selectableItemBackground"
+            android:textAllCaps="false"
+            android:background="@drawable/custom_button"
+            android:textColor="@color/black"
+            android:fontFamily="@font/ubuntul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/type_food"
+            android:layout_below="@+id/view4"
+            android:text="Type of Food"
+            android:layout_margin="5dp"
+            android:textSize="15dp" />
+
+        <View
+            android:layout_margin="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_below="@id/type_food"
+            android:id="@+id/view5"
+            android:background="#C0C0C0"/>
+
+        <Button
+            android:stateListAnimator="@anim/animation"
+            android:foreground="?attr/selectableItemBackground"
+            android:textAllCaps="false"
+            android:background="@drawable/custom_button"
+            android:textColor="@color/black"
+            android:fontFamily="@font/ubuntul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/type_service"
+            android:layout_below="@+id/view5"
+            android:text="Service"
+            android:layout_margin="5dp"
+            android:textSize="15dp" />
+
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="378dp"
+        android:id="@+id/view7"
+        android:layout_toRightOf="@id/leftLayout"
+        android:layout_below="@id/view1"
+        android:background="@color/black"  />
+
+    <!--right Layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="304dp"
+        android:layout_below="@id/view1"
+        android:id="@+id/rightLayout"
+        android:layout_toRightOf="@+id/view7">
+
+        <!--sort layout -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/sortLayout"
+            android:visibility="visible"
+            android:orientation="vertical">
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sort By:"
+                android:paddingBottom="5dp"
+                android:id="@+id/sortText"
+                android:textSize="25dp"
+                android:fontFamily="@font/ubuntu"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"/>
+
+            <RadioGroup
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:id="@+id/sortGroup"
+                android:layout_margin="15dp"
+                android:layout_below="@+id/sortText"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:fontFamily="@font/ubuntul"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/distance"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:textSize="15dp"
+                    android:text="Distance" />
+
+                <RadioButton
+                    android:textSize="15dp"
+                    android:fontFamily="@font/ubuntul"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/rating"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Rating: High to Low" />
+
+            </RadioGroup>
+
+        </RelativeLayout>
+
+        <!-- cuisine layout -->
+
+
+            <RelativeLayout
+                android:id="@+id/cuisineLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ListView
+                    android:id="@+id/cuisinelistview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:choiceMode="multipleChoice"
+                    />
+
+            </RelativeLayout>
+
+
+
+
+        <!-- delivery layout -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/deliveryLayout"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Filter By:"
+                android:fontFamily="@font/ubuntu"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="5dp"
+                android:id="@+id/deliveryText"
+                android:textSize="25dp"
+                android:layout_marginTop="25dp" />
+
+            <RadioGroup
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:id="@+id/deli_take_group"
+                android:layout_margin="15dp"
+                android:layout_below="@+id/deliveryText"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:textSize="15dp"
+                    android:fontFamily="@font/ubuntul"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/deli"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Delivery" />
+
+                <RadioButton
+                    android:textSize="15dp"
+                    android:fontFamily="@font/ubuntul"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/take"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Take Away" />
+
+                <RadioButton
+                    android:fontFamily="@font/ubuntul"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/dtboth"
+                    android:textSize="15dp"
+                    android:layout_margin="10dp"
+                    android:layout_height="wrap_content"
+                    android:text="Both" />
+
+            </RadioGroup>
+
+
+        </RelativeLayout>
+
+
+        <!-- type of food layout -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/foodLayout"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Filter By:"
+                android:fontFamily="@font/ubuntu"
+                android:paddingBottom="5dp"
+                android:id="@+id/foodText"
+                android:textSize="25dp"
+                android:layout_marginTop="25dp" />
+
+            <RadioGroup
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:id="@+id/veg_non_Group"
+                android:layout_margin="15dp"
+                android:layout_below="@+id/foodText"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:fontFamily="@font/ubuntul"
+                    android:textSize="15dp"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/veg"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Veg" />
+
+                <RadioButton
+                    android:fontFamily="@font/ubuntul"
+                    android:textSize="15dp"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/nonveg"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Non-Veg" />
+
+                <RadioButton
+                    android:fontFamily="@font/ubuntul"
+                    android:textSize="15dp"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/vnboth"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Both" />
+
+            </RadioGroup>
+
+        </RelativeLayout>
+
+
+        <!-- type of service layout -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/serviceLayout"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Filter By:"
+                android:textColor="@color/black"
+                android:fontFamily="@font/ubuntu"
+                android:paddingBottom="5dp"
+                android:id="@+id/serviceText"
+                android:layout_centerHorizontal="true"
+                android:textSize="25dp"
+                android:layout_marginTop="25dp" />
+
+            <RadioGroup
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:id="@+id/serviceGroup"
+                android:layout_margin="15dp"
+                android:layout_below="@+id/serviceText"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:fontFamily="@font/ubuntul"
+                    android:textSize="15dp"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/type_tiffin"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Tiffin Service" />
+
+                <RadioButton
+                    android:textSize="15dp"
+                    android:fontFamily="@font/ubuntul"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/type_menu"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Menu" />
+
+                <RadioButton
+                    android:textSize="15dp"
+                    android:fontFamily="@font/ubuntul"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tmboth"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Both" />
+
+            </RadioGroup>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        android:id="@+id/view8"
+        android:layout_below="@+id/leftLayout"/>
+
+    <!-- bottom  buttons layout -->
+    <RelativeLayout
+        android:layout_margin="10dp"
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view8">
+
+        <Button
+            android:stateListAnimator="@anim/animation"
+            android:foreground="?attr/selectableItemBackground"
+            android:background="@drawable/custom_button_black"
+            android:textColor="@color/yellow"
+            android:fontFamily="@font/ubuntu"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apply"
+            android:id="@+id/apply"
+            android:layout_marginLeft="20dp"
+            android:textSize="15dp"/>
+
+        <Button
+            android:stateListAnimator="@anim/animation"
+            android:foreground="?attr/selectableItemBackground"
+            android:background="@drawable/custom_button_black"
+            android:textColor="@color/yellow"
+            android:textAllCaps="false"
+            android:fontFamily="@font/ubuntu"
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@id/apply"
+            android:layout_height="wrap_content"
+            android:text="Clear All"
+            android:id="@+id/clear"
+            android:layout_marginLeft="120dp"
+            android:textSize="15dp"/>
+
+    </RelativeLayout>
+
+        <View
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/buttons"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+
+</RelativeLayout>

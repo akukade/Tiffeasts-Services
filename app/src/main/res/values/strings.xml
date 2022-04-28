@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Tiffeasts</string>
+
+
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
+    <string name="Rs">\u20B9</string>
+
+    <string name="otp_verification">OTP Verification</string>
+    <string name="we_will_send_you_an_otp_on_this_mobile_number">OTP will be sent on this number</string>
+    <string name="enter_mobile_number">Enter Mobile Number</string>
+    <string name="_1234567890">1234567890</string>
+    <string name="get_otp">Get OTP</string>
+    <string name="please_enter_otp">Please enter OTP</string>
+    <string name="please_enter_otp_sent_to">Please Enter OTP sent to</string>
+    <string name="didn_t_receive_otp_yet">Didn\'t receive OTP yet?</string>
+    <string name="verify_otp">Verify OTP</string>
+
+
+    <string name="title_activity_customlocation">Map</string>
+    <string-array name="shopping_item">
+        <item>Maharashtrian</item>
+        <item>Gujarati</item>
+        <item>Rajasthani</item>
+        <item>Goan</item>
+        <item>Punjabi</item>
+        <item>South Indian</item>
+        <item>Bengali</item>
+        <item>Bakery</item>
+        <item>Konkani</item>
+        <item>Chinese</item>
+        <item>Italian</item>
+        <item>Continental</item>
+        <item>Parsi</item>
+        <item>Other</item>
+    </string-array>
+</resources>

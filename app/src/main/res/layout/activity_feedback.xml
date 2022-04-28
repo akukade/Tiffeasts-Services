@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Feedback">
+
+
+
+    <TextView
+        android:textSize="40sp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/sendfeebacktext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ubuntu"
+        android:text="Send Feedback"
+        android:textColor="@color/black"
+        android:layout_margin="10dp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/tellus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sendfeebacktext"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/ubuntul"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:text="Tell us what you love about the app, or what we could do better."></TextView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/tellus"
+        android:id="@+id/feedbackmail"
+        android:textColorHint="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <TextView
+            android:text="tiffeasts@gmail.com"
+            android:padding="15dp"
+            android:id="@+id/feedbackmail1"
+            android:fontFamily="@font/ubuntul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textSize="18dp"
+            android:textColorHint="@color/black"
+            android:hint="Email"
+            android:inputType="textCapSentences"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--<com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/feedbackmail"
+        android:id="@+id/feedbacktext"
+        android:textColorHint="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <!-<com.google.android.material.textfield.TextInputEditText
+            android:padding="15dp"
+            android:id="@+id/feedbacktext1"
+            android:fontFamily="@font/ubuntul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textSize="18dp"
+            android:textColorHint="@color/black"
+            android:hint="Enter Feedback"
+            android:inputType="textCapSentences"
+            android:textColor="#000000" />
+    </com.google.android.material.textfield.TextInputLayout>-->
+
+
+    <Button
+        android:id="@+id/submitfeedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_button"
+        android:layout_below="@id/feedbackmail"
+        android:layout_margin="20dp"
+        android:textColor="@color/black"
+        android:text="Contact Us"
+        android:textAllCaps="false">
+
+    </Button>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:card_view="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:id="@+id/messagecard"
+
+android:stateListAnimator="@anim/animation"
+android:foreground="?attr/selectableItemBackground"
+android:clickable="true"
+
+app:cardPreventCornerOverlap="false"
+app:cardUseCompatPadding="true"
+
+android:layout_height="wrap_content"
+android:padding="20dp"
+card_view:cardCornerRadius="10dp"
+android:layout_margin="7dp"
+android:layout_marginBottom="50dp"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:elevation="200dp">
+
+<RelativeLayout
+    android:outlineSpotShadowColor="@color/black"
+    android:outlineAmbientShadowColor="@color/black"
+    android:background="@color/yellow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/messagetext"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="17sp"
+        android:text="Message"
+        android:fontFamily="@font/ubuntul"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/submsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status Message"
+        android:layout_below="@+id/messagetext"
+        android:textColor="@color/black"
+        android:padding="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="5dp"/>
+
+</RelativeLayout>
+
+</androidx.cardview.widget.CardView>

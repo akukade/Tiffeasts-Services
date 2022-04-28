@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Confirm">
+
+    <TextView
+        android:id="@+id/confirmtext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirm and \nEnjoy!"
+        android:fontFamily="@font/ubuntu"
+        android:textColor="@color/ruby"
+        android:textSize="40sp"
+        android:layout_marginLeft="5dp"/>
+
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_below="@id/confirmtext"
+        android:id="@+id/cvconfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/ruby"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/ruby"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/customization"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Additional Requirements"
+                        android:textColorHint="@color/ruby"
+                        android:fontFamily="@font/ubuntul">
+
+                    </com.google.android.material.textfield.TextInputEditText>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/ruby"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"/>
+
+
+
+
+
+
+                <ProgressBar
+                    android:id="@+id/addprogresscuston"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:visibility="gone">
+
+                </ProgressBar>
+
+
+
+            </LinearLayout>
+
+
+
+        </ScrollView>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:layout_below="@+id/cvconfirm"
+        android:id="@+id/confirm"
+        android:layout_width="250dp"
+        android:fontFamily="@font/ubuntu"
+        android:layout_marginTop="12dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_button"
+        android:text="Confirm Order"
+        android:textColor="@color/white" />
+
+
+
+</RelativeLayout>

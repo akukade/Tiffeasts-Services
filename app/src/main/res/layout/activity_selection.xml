@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Selection"
+    android:layout_margin="5dp">
+
+        <TextView
+        android:id="@+id/selecttitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Items"
+        android:layout_margin="8dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="25sp"
+        android:textAllCaps="true"
+        android:fontFamily="@font/ubuntu"
+        android:textColor="@color/black"/>
+
+    <ScrollView
+        android:id="@+id/mainlayout"
+        android:layout_below="@+id/selecttitle"
+        android:layout_above="@+id/foodLayout"
+        android:layout_margin="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/titleui"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:text="Item"
+                    android:textSize="20sp"
+                    android:textAllCaps="true"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:text="Price"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/ubuntu"
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Qty"
+                    android:layout_weight="3"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/ubuntu"
+                    android:textColor="@color/black"
+                    />
+
+            </LinearLayout>
+
+            <com.example.bookmytiffin.speciallistview
+                android:id="@+id/selectlistview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleui"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp">
+            </com.example.bookmytiffin.speciallistview>
+
+        <RelativeLayout
+            android:id="@+id/nextpagelayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/selectlistview"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/timeslottitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delivery Time Slot"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:fontFamily="@font/ubuntul"
+                android:layout_margin="10dp"/>
+
+            <Spinner
+                android:id="@+id/delitimeslot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="7dp"
+                android:layout_below="@+id/timeslottitle"
+                android:background="@android:drawable/btn_dropdown"
+                android:spinnerMode="dropdown"/>
+
+            <TextView
+                android:id="@+id/adtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:textSize="18sp"
+                android:layout_below="@+id/delitimeslot"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/ubuntul"
+                android:textColor="@color/black"
+                />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/deliaddress"
+                android:editable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:background="@null"
+                android:focusableInTouchMode="true"
+                android:layout_width="wrap_content"
+                app:met_underlineColor="@color/shake_sdk_red"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/adtitle"
+                android:text="Actual Address"
+                android:textAllCaps="true"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="7dp"
+                />
+
+            <TextView
+                android:id="@+id/mode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Mode"
+                android:textStyle="bold"
+                android:fontFamily="@font/ubuntul"
+                android:layout_margin="10dp"
+                android:layout_below="@+id/deliaddress"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                />
+
+            <RadioGroup
+                android:id="@+id/deli_take_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/mode">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/deliradio"
+                    android:textSize="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="wrap_content"
+                    android:text="Delivery"
+                    android:fontFamily="@font/ubuntul"
+                    android:textColor="@color/black" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/takeradio"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_height="wrap_content"
+                    android:text="Takeaway"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/ubuntul"
+                    android:textColor="@color/black"/>
+            </RadioGroup>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_below="@+id/deli_take_radio"
+                android:layout_height="60dp"
+                android:layout_width="match_parent"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                >
+                <EditText
+                    android:id="@+id/completeaddress"
+                    android:background="@null"
+                    android:hint="Exact Address Details"
+                    android:imeOptions="actionNext"
+                    android:importantForAutofill="no"
+                    tools:ignore="LabelFor"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/foodLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/deliLayout"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/fatitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Food Amount : ₹"
+            android:textSize="18sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/ubuntul"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/foodtotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/fatitle"
+            android:textSize="18sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="0"
+            android:fontFamily="@font/ubuntul"
+            android:textColor="@color/black"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/deliLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tatitle"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/dctitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delivery Charges : ₹"
+            android:textSize="18sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/ubuntul"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/delicharges"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/dctitle"
+            android:textSize="18sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="0"
+            android:fontFamily="@font/ubuntul"
+            android:textColor="@color/black"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tatitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Amount : ₹"
+        android:layout_above="@+id/confirm"
+        android:textSize="18sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/ubuntul"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/confirm"
+        android:layout_toEndOf="@+id/tatitle"
+        android:textSize="18sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="0"
+        android:fontFamily="@font/ubuntul"
+        android:textColor="@color/black"/>
+
+    <Button
+        android:id="@+id/confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirm Order"
+        android:textSize="18sp"
+        android:layout_margin="5dp"
+        android:textAllCaps="false"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/ubuntu"
+        android:textColor="@color/black" />
+
+</RelativeLayout>

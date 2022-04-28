@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="organe">#FC8019</color>
+    <color name="white">#FFFFFF</color>
+    <color name="pink">#ad1c58</color>
+    <color name="grey">#f9f9f9</color>
+    <color name="skin">#ecbcb4</color>
+    <color name="skin1">#e2b697</color>
+    <color name="skin2">#fcb69f</color>
+    <color name="cardinal">#c41e3a</color>
+    <color name="grey1">#ededed</color>
+    <color name="ruby">#00BCD4</color>
+    <color name="black">#050A30</color>
+    <color name="darkgrey">#373737
+    </color>
+    <color name="yellow">#f5a633</color>
+    <color name="yellow1">#f5a633</color>
+
+    <color name="colorPrimaryOTP">#536DFE</color>
+    <color name="colorPrimaryDarkOTP">#536DFE</color>
+    <color name="colorAccentOTP">#FF0000 </color>
+    <color name="colorTextPrimaryOTP">#212121</color>
+    <color name="colorTextSecondaryOTP">#757575</color>
+    <color name="colorDividerOTP">#BDBDBD</color>
+    <color name="colorWhiteOTP">#FFFFFF</color>
+</resources>

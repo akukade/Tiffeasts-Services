@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+<group>
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
+
+
+        <item
+            android:id="@+id/nav_message"
+            android:icon="@drawable/ic_baseline_message_24"
+            android:title="Your Messages" />
+
+        <item
+            android:id="@+id/nav_orders"
+            android:icon="@drawable/ic_baseline_shopping_basket_24"
+            android:title="Your Orders" />
+
+        <item
+            android:id="@+id/nav_tiffin"
+            android:icon="@drawable/ic_tiffin4"
+            android:title="Your Uploads" />
+
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_baseline_account_circle_24"
+            android:title="Profile"/>
+
+
+</group>
+
+
+</menu>

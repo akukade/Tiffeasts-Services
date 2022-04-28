@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Userdetails"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="20dp">
+
+
+    <soup.neumorphism.NeumorphTextView
+        android:id="@+id/textView3"
+        style="@style/Widget.Neumorph.TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/yellow"
+        android:fontFamily="@font/ubuntu"
+        android:text="ADD YOUR PROFILE"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <soup.neumorphism.NeumorphTextView
+        android:layout_below="@id/textView3"
+        style="@style/Widget.Neumorph.TextView"
+        android:id="@+id/detailtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fill details to continue"
+        android:textColor="@color/black"
+        android:fontFamily="@font/ubuntu"
+        android:textSize="18sp" />
+
+    <RelativeLayout
+        android:layout_below="@id/detailtext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical"
+        android:id="@+id/innerLin">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/firstName1"
+            android:textColorHint="@color/black"
+            app:hintAnimationEnabled="true"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <EditText
+                android:background="@color/shake_sdk_transparent"
+                android:cursorVisible="true"
+                android:id="@+id/firstName"
+                android:hint="Full Name"
+                android:textColorHint="@color/black"
+                android:layout_gravity="center"
+                android:fontFamily="@font/ubuntul"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textPersonName"
+                android:textColor="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_below="@id/firstName1"
+            android:textColorHint="@color/black"
+            android:layout_marginTop="5dp"
+            app:hintAnimationEnabled="true"
+            android:id="@+id/emailAddress1"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+
+            <EditText
+                android:id="@+id/emailAddress"
+                android:fontFamily="@font/ubuntul"
+                android:background="@color/shake_sdk_transparent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Email Address"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:textColorHint="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--<com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/wingbuilding"
+            android:layout_below="@id/emailAddress1"
+            android:layout_marginTop="5dp"
+            android:textColorHint="@color/black"
+            app:hintAnimationEnabled="true"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <EditText
+                android:id="@+id/wingbuilding1"
+                android:fontFamily="@font/ubuntul"
+                android:background="@color/shake_sdk_transparent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="House no / Flat no / Floor / Building"
+                android:inputType="textPostalAddress"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:textColorHint="@color/black" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/landmark"
+            android:layout_below="@id/wingbuilding"
+            android:layout_marginTop="5dp"
+            android:textColorHint="@color/black"
+            app:hintAnimationEnabled="true"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <EditText
+                android:id="@+id/landmark1"
+                android:fontFamily="@font/ubuntul"
+                android:background="@color/shake_sdk_transparent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Landmark"
+                android:inputType="textPostalAddress"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:textColorHint="@color/black" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/autodetect"
+            android:layout_below="@id/landmark"
+            android:layout_marginTop="5dp"
+            android:textColorHint="@color/black"
+            app:hintAnimationEnabled="true"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <EditText
+                android:id="@+id/autodetect1"
+                android:fontFamily="@font/ubuntul"
+                android:background="@color/shake_sdk_transparent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Auto Detect Location"
+                android:inputType="textPostalAddress"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:textColorHint="@color/black" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>-->
+
+
+
+
+
+
+        <RadioGroup
+            android:id="@+id/radioterms"
+            android:layout_below="@id/emailAddress1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <RadioButton
+                android:id="@+id/termsandcond"
+                android:layout_width="27dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:contextClickable="true"
+                android:fontFamily="@font/ubuntul"
+                android:padding="10dp"
+                android:textStyle="bold" />
+
+
+        </RadioGroup>
+
+        <soup.neumorphism.NeumorphTextView
+            android:id="@+id/privacyterms"
+            style="@style/Widget.Neumorph.TextView"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/ubuntul"
+            android:text="By continuing, I confirm that I have read and agree to the Terms and Conditions and Privacy Policy"
+            android:layout_toRightOf="@+id/radioterms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emailAddress1"/>
+
+    </RelativeLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/autodetect"
+        android:layout_below="@id/saveBtn"
+        android:layout_marginTop="5dp"
+        android:textColorHint="@color/black"
+        app:hintAnimationEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <EditText
+            android:id="@+id/autodetect1"
+            android:fontFamily="@font/ubuntul"
+            android:background="@color/shake_sdk_transparent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Auto Detect Location"
+            android:inputType="textPostalAddress"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:textColorHint="@color/black" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <Button
+        style="@style/Widget.Neumorph.Button"
+        android:stateListAnimator="@anim/animation"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:id="@+id/saveBtn"
+        android:layout_below="@id/innerLin"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="false"
+        android:fontFamily="@font/ubuntu"
+        android:textAllCaps="false"
+        android:background="@drawable/round_button"
+        android:layout_centerHorizontal="true"
+        android:text="NEXT"
+        android:textColor="@color/yellow"
+        android:textSize="17sp" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/success"
+        android:layout_width="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/tickregistration"/>
+
+
+
+
+</RelativeLayout>

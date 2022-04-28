@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Payment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/paytext"
+        android:textSize="35sp"
+        android:layout_centerHorizontal="true"
+        android:text="Payment Method"
+        android:fontFamily="@font/ubuntu"
+        android:textColor="@color/black"
+        android:layout_margin="12dp"/>
+
+    <RadioGroup
+        android:id="@+id/paymentoption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/paytext">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/onlineradio"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:text="Online UPI Payment"
+            android:fontFamily="@font/ubuntul"
+            android:textColor="@color/black"
+            android:checked="true"/>
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/scanradio"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content"
+            android:text="Scan and Pay "
+            android:visibility="gone"
+            android:textSize="18sp"
+            android:fontFamily="@font/ubuntul"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/disclaimer"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            android:textColor="@color/shake_sdk_red"
+            android:layout_marginLeft="18dp"
+            android:text="Order will be confirmed only after payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+    </RadioGroup>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/paymentcardview"
+        android:layout_below="@id/paymentoption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:elevation="200dp"
+        android:padding="10dp"
+        android:background="@color/yellow"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:background="@color/yellow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_margin="10dp"
+                android:id="@+id/paymentoptiontext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payment - "
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/ubuntul"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_toRightOf="@id/paymentoptiontext"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntul"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:layout_margin="10dp"
+                android:id="@+id/selectedpaymentoption"
+                android:text="Online UPI Payment"/>
+
+            <TextView
+                android:layout_margin="10dp"
+                android:id="@+id/amounttext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Amount - "
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/ubuntul"
+                android:textColor="@color/black"
+                android:layout_below="@+id/paymentoptiontext"/>
+
+            <TextView
+                android:id="@+id/amount_et"
+                android:layout_toRightOf="@id/amounttext"
+                android:layout_below="@id/paymentoptiontext"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Amount"
+                android:fontFamily="@font/ubuntul"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:layout_margin="10dp"
+                android:inputType="number"/>
+
+
+
+                <TextView
+                    android:id="@+id/name"
+                    android:fontFamily="@font/ubuntul"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/amounttext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tiffeasts Services"
+                    android:textSize="17sp"
+                    android:textColor="@color/black"
+                    android:layout_margin="10dp"
+                    />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <ImageView
+        android:id="@+id/qrcode"
+        android:stateListAnimator="@anim/animation"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:background="@drawable/download"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/paymentcardview"
+        android:layout_width="100dp"
+        android:layout_height="100dp">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/qrcodetext"
+        android:stateListAnimator="@anim/animation"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:layout_below="@id/qrcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/shake_sdk_red"
+        android:padding="5dp"
+        android:text="Please download the QR Payment code and initiate the payment">
+    </TextView>
+
+
+    <Button
+        android:background="@drawable/custom_button"
+        android:layout_width="match_parent"
+        android:textAllCaps="false"
+        android:fontFamily="@font/ubuntu"
+        android:layout_height="wrap_content"
+        android:id="@+id/send"
+        android:textSize="17sp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        android:layout_centerHorizontal="true"
+        android:text="Pay using Online UPI"/>
+
+    <TextView
+        android:layout_above="@id/send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="For any queries write us on tiffeasts@gmail.com"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="15dp"
+        android:fontFamily="@font/ubuntul"
+        android:textColor="@color/black"/>
+
+</RelativeLayout>

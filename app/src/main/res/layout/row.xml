@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:elevation="150dp"
+    android:layout_margin="5dp"
+    app:cardUseCompatPadding="true"
+    >
+
+    <LinearLayout
+        android:stateListAnimator="@anim/animation"
+        android:foreground="?attr/selectableItemBackground"
+        android:background="@color/yellow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/faqlinear"
+        android:orientation="vertical">
+
+        <TextView
+
+            android:id="@+id/question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hello"
+            android:fontFamily="@font/ubuntul"
+            android:textSize="20dp"
+            android:padding="15dp"
+            android:textColor="@color/black"/>
+
+        <View
+            android:layout_below="@id/question"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/expandablerelative">
+
+            <TextView
+                android:id="@+id/answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntul"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:text="Description"
+                android:padding="15dp"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

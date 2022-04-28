@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerVertical="true"
+    android:layout_centerHorizontal="true"
+    tools:context=".Register">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/innerRel">
+
+
+        <TextView
+            android:id="@+id/wel"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu"
+            android:text="WELCOME\nGET STARTED"
+            android:layout_marginTop="200dp"
+            android:layout_marginBottom="15dp"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="6dp"
+            tools:layout_editor_absoluteY="6dp" />
+
+        <!-- <com.airbnb.lottie.LottieAnimationView
+             android:id="@+id/wel"
+             android:layout_marginTop="40dp"
+             android:layout_width="300dp"
+             android:layout_height="300dp"
+             android:layout_centerHorizontal="true"
+             app:lottie_rawRes="@raw/ready">
+
+         </com.airbnb.lottie.LottieAnimationView>-->
+
+
+        <EditText
+            android:layout_below="@+id/wel"
+            android:id="@+id/phone"
+            android:fontFamily="@font/ubuntul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:ems="10"
+            android:hint="Phone Number"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:inputType="phone"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="19sp">
+        </EditText>
+
+        <Button
+            android:layout_below="@id/codeEnter"
+            android:id="@+id/nextBtn"
+            android:fontFamily="@font/ubuntu"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:textAllCaps="false"
+            android:background="@drawable/custom_button"
+            android:text="Next"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <ProgressBar
+            android:visibility="invisible"
+            android:id="@+id/verifyprogressbar"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nextBtn"/>
+
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/verifytext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/verifyprogressbar"
+            android:text="Verifying..."
+            android:textColor="@color/black"
+            android:fontFamily="@font/ubuntul"
+            android:textSize="18dp"
+            android:layout_centerHorizontal="true"/>
+
+
+
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_below="@+id/phone"
+            android:layout_marginLeft="16dp" />
+
+        <TextView
+            android:layout_margin="20dp"
+            android:id="@+id/state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:text="Sending OTP.."
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:visibility="invisible"
+            />
+
+        <EditText
+            android:fontFamily="@font/ubuntul"
+            android:id="@+id/codeEnter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_marginLeft="15dp"
+            android:hint="Enter OTP"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:visibility="invisible"
+            android:layout_below="@+id/phone"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            />
+
+
+
+
+
+
+
+        <TextView
+            android:id="@+id/resendOtpBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resend"
+            android:layout_margin="10dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:visibility="invisible"
+            android:layout_below="@id/nextBtn"/>
+
+        ></RelativeLayout>
+
+    <!--<com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/successnew" />-->
+
+</RelativeLayout>

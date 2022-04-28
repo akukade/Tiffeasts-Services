@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedscroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:padding="10dp"
+            android:id="@+id/rel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:id="@+id/joingetstartedtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Get Started !"
+                android:layout_margin="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/ubuntu"
+                android:textSize="40dp">
+
+            </TextView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_below="@id/joingetstartedtext"
+                android:id="@+id/selectioncard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:elevation="150dp"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="20dp">
+
+
+                <RelativeLayout
+                    android:layout_below="@id/joingetstartedtext"
+                    android:padding="10dp"
+                    android:background="@color/yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/selection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Selection Criteria"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/ubuntu"
+                        android:layout_centerHorizontal="true"/>
+
+                    <View
+                        android:layout_below="@id/selection"
+                        android:id="@+id/belowselection"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:textSize="20dp"
+                        android:layout_below="@+id/belowselection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="1)  A Home Cook looking for an opportunity.\n2)  Clean kitchen with adequate hygiene maintained\n3) Passionate Chef providing good quality food."
+                        android:fontFamily="@font/ubuntul"
+                        android:textColor="@color/black"></TextView>
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_below="@+id/selectioncard"
+                android:id="@+id/ourworking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:elevation="150dp"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="20dp">
+
+
+                <RelativeLayout
+                    android:padding="10dp"
+                    android:background="@color/yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/working"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Our Working"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/ubuntu"
+                        android:layout_centerHorizontal="true"/>
+
+                    <View
+                        android:layout_below="@id/working"
+                        android:id="@+id/belowworking"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:textSize="20dp"
+                        android:layout_below="@+id/belowworking"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="1)  Create your profile.\n2)  List your Menu and Recipes \n3) Start getting Orders."
+                        android:fontFamily="@font/ubuntul"
+                        android:textColor="@color/black"></TextView>
+
+                </RelativeLayout>
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+
+                android:id="@+id/YourBenfit"
+                android:layout_below="@+id/ourworking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:elevation="150dp"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="20dp">
+
+
+                <RelativeLayout
+                    android:padding="10dp"
+                    android:background="@color/yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/benefit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Benefit"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/ubuntu"
+                        android:layout_centerHorizontal="true"/>
+
+                    <View
+                        android:layout_below="@id/benefit"
+                        android:id="@+id/belowbenfit"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:textSize="20dp"
+                        android:layout_below="@+id/belowbenfit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="1)  Get wider customer base.\n2)  Take your business online. \n3)  Create your Identity.\n4)  Earn from home."
+                        android:fontFamily="@font/ubuntul"
+                        android:textColor="@color/black"></TextView>
+
+                </RelativeLayout>
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/YourVerification"
+                android:layout_below="@+id/YourBenfit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:elevation="150dp"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="20dp">
+
+
+                <RelativeLayout
+                    android:padding="10dp"
+                    android:background="@color/yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/verification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Verification"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/ubuntu"
+                        android:layout_centerHorizontal="true"/>
+
+                    <View
+                        android:layout_below="@id/verification"
+                        android:id="@+id/belowverification"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:textSize="20dp"
+                        android:layout_below="@+id/belowverification"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Our Promise to Consumers is Trusted and Verified Home Chefs. Our vendor management will contact you for your official Identification and once verified you can start with your business."
+                        android:fontFamily="@font/ubuntul"
+                        android:textColor="@color/black"></TextView>
+
+                </RelativeLayout>
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:stateListAnimator="@anim/animation"
+                android:foreground="?attr/selectableItemBackground"
+                android:textAllCaps="false"
+                android:id="@+id/startupload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_button_black"
+                android:text="Send Message"
+                android:textColor="@color/yellow"
+                android:fontFamily="@font/ubuntu"
+                android:layout_below="@id/YourVerification"
+                android:layout_margin="10dp">
+
+            </Button>
+
+        </RelativeLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:visibility="gone"
+        android:layout_marginTop="15dp"
+        android:id="@+id/ournumber1"
+        android:textColorHint="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <TextView
+            android:padding="15dp"
+            android:id="@+id/ournumber"
+            android:text="9987896808"
+            android:fontFamily="@font/ubuntu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textSize="18dp"
+            android:textColorHint="@color/black"
+            android:hint="Number"
+            android:inputType="textCapSentences"
+            android:textColor="#000000" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+    <!--<EditText
+        android:layout_below="@id/joingetstartedtext"
+        android:layout_margin="15dp"
+        android:id="@+id/ournumber"
+        android:hint="Number"
+        android:textColorHint="#000000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number">
+
+    </EditText>-->
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:visibility="gone"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/ournumber1"
+        android:id="@+id/joinmessage1"
+        android:textColorHint="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <TextView
+            android:padding="15dp"
+            android:text="I would love to get started."
+            android:id="@+id/joinmessage"
+            android:fontFamily="@font/ubuntu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textSize="18dp"
+            android:textColorHint="@color/black"
+            android:hint="Message"
+            android:inputType="textCapSentences"
+            android:textColor="#000000" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!--<EditText
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:id="@+id/joinmessage"
+        android:inputType="textCapSentences"
+        android:layout_below="@id/ournumber">
+
+    </EditText>-->
+
+
+
+
+
+</RelativeLayout>

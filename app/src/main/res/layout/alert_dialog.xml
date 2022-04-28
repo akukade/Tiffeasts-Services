@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView app:cardCornerRadius="20dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_height="250dp"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/showlocationimage"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/ic_baseline_add_location_24">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/showdialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADD YOUR ADDRESS/ AUTO DETECT"
+            android:fontFamily="@font/ubuntu"
+            android:textColor="@color/black" />
+
+        <!--<Button
+            android:layout_marginTop="14dp"
+            android:id="@+id/addlocation"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_button"
+            android:text="Add yourself"
+            android:textColor="@color/white"/>-->
+
+        <Button
+            android:id="@+id/locatelocation"
+            android:layout_marginTop="10dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Locate"
+            android:textAllCaps="false"
+            android:background="@drawable/custom_button"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+
+
+
+
+</androidx.cardview.widget.CardView>

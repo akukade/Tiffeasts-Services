@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+
+                android:id="@+id/selectioncard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:elevation="150dp"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="20dp">
+
+
+                <RelativeLayout
+                    android:background="@color/yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/selection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Selection Critera"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/ubuntu"
+                        android:layout_centerHorizontal="true"/>
+
+                    <View
+                        android:layout_below="@id/selection"
+                        android:id="@+id/belowselection"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:textSize="20dp"
+                        android:layout_below="@+id/belowselection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="1)  A Home Chef who wishes to be actively engaged.\n2)  Chef house and Kitchen should be clean and Hygienic.\n3) A Chef who is passionate about cooking and makes good quality food."
+                        android:fontFamily="@font/ubuntul"
+                        android:textColor="@color/black"></TextView>
+
+                </RelativeLayout>
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_below="@+id/selectioncard"
+                android:id="@+id/ourworking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:elevation="150dp"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="20dp">
+
+
+                <RelativeLayout
+                    android:background="@color/yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/working"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Our Working"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/ubuntu"
+                        android:layout_centerHorizontal="true"/>
+
+                    <View
+                        android:layout_below="@id/working"
+                        android:id="@+id/belowworking"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:textSize="20dp"
+                        android:layout_below="@+id/belowworking"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="1)  Create your Profile.\n2)  List your Food and Recipes \n3) Start getting Orders."
+                        android:fontFamily="@font/ubuntul"
+                        android:textColor="@color/black"></TextView>
+
+                </RelativeLayout>
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+
+                android:id="@+id/YourBenfit"
+                android:layout_below="@+id/ourworking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:elevation="150dp"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="20dp">
+
+
+                <RelativeLayout
+                    android:background="@color/yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/benefit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Your Benfit"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/ubuntu"
+                        android:layout_centerHorizontal="true"/>
+
+                    <View
+                        android:layout_below="@id/benefit"
+                        android:id="@+id/belowbenfit"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:textSize="20dp"
+                        android:layout_below="@+id/belowbenfit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="1)  Get Countless Customers.\n2)  Manage Business Professionally. \n3)  Create your Identity.\n4)  Earn from Home."
+                        android:fontFamily="@font/ubuntul"
+                        android:textColor="@color/black"></TextView>
+
+                </RelativeLayout>
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/YourVerification"
+                android:layout_below="@+id/YourBenfit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:elevation="150dp"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="20dp">
+
+
+                <RelativeLayout
+                    android:background="@color/yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/verification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Verification"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/ubuntu"
+                        android:layout_centerHorizontal="true"/>
+
+                    <View
+                        android:layout_below="@id/verification"
+                        android:id="@+id/belowverification"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:textSize="20dp"
+                        android:layout_below="@+id/belowverification"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Our Promise to Consumers is Trusted and Verified Home Chefs. Our vendor management will contact you for your official Identification and once verified you can start with the business."
+                        android:fontFamily="@font/ubuntul"
+                        android:textColor="@color/black"></TextView>
+
+                </RelativeLayout>
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

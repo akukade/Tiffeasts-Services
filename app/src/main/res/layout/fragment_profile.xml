@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="5dp">
+
+
+
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:id="@+id/pro1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profile"
+        android:textColor="@color/black"
+        android:fontFamily="@font/ubuntu"
+        android:textSize="40dp"/>
+
+    <TextView
+        android:visibility="invisible"
+        android:layout_below="@id/pro1"
+        android:id="@+id/infoprofilefrag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This is your profile"
+        android:textSize="15dp"
+        android:fontFamily="@font/ubuntul"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:layout_margin="10dp"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="10dp"
+        android:id="@+id/profilecard"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/infoprofilefrag"
+        android:elevation="200dp"
+        app:cardCornerRadius="10dp">
+
+        <ScrollView
+            android:elevation="200dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:elevation="200dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <!--<TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Your Name"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/ubuntul"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>-->
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/tname"
+                    android:hint="Name"
+                    app:met_textColorHint="@color/black"
+                    android:layout_marginTop="15dp"
+                    app:met_floatingLabel="normal"
+                    app:met_floatingLabelTextColor="@color/black"
+                    app:met_floatingLabelAnimating="true"
+                    app:met_floatingLabelTextSize="17dp"
+                    app:met_underlineColor="@color/yellow"
+                    android:focusableInTouchMode="true"
+                    android:editable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:imeActionLabel="Name"
+                    android:fontFamily="@font/ubuntul"
+                    android:textAllCaps="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Your Name"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <!--<TextView
+                    android:layout_below="@id/tname"
+                    android:id="@+id/email"
+                    android:layout_marginTop="10dp"
+
+                    android:focusableInTouchMode="true"
+                    android:editable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:imeActionLabel="Name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Email"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/ubuntul"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>-->
+
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/temail"
+                    app:met_floatingLabel="normal"
+                    app:met_floatingLabelTextColor="@color/black"
+                    app:met_floatingLabelAnimating="true"
+                    app:met_floatingLabelTextSize="17dp"
+                    app:met_underlineColor="@color/yellow"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/ubuntul"
+                    android:layout_width="match_parent"
+                    android:textAllCaps="false"
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@id/tname"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:text="Your Email"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <!--<TextView
+                    android:layout_below="@id/temail"
+                    android:id="@+id/mobileno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Number"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/ubuntul"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>-->
+
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:textColor="@color/black"
+                    android:id="@+id/tmobileno"
+                    android:layout_below="@id/temail"
+                    android:hint="Number"
+                    app:met_textColorHint="@color/black"
+                    android:layout_marginTop="15dp"
+                    app:met_floatingLabel="normal"
+                    app:met_floatingLabelTextColor="@color/black"
+                    app:met_floatingLabelAnimating="true"
+                    app:met_floatingLabelTextSize="17dp"
+                    app:met_underlineColor="@color/yellow"
+                    android:focusableInTouchMode="true"
+                    android:editable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:imeActionLabel="Name"
+                    android:fontFamily="@font/ubuntul"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Your Number"
+                    android:textAllCaps="false"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:stateListAnimator="@anim/animation"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:id="@+id/addressbook"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tmobileno"
+                    android:padding="15dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/ubuntul"
+                    android:text="Address Book"
+                    android:textSize="20dp"/>
+
+                <View
+                    android:layout_below="@id/addressbook"
+                    android:id="@+id/belowaddressbook"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/listDivider" />
+
+
+                <TextView
+                    android:stateListAnimator="@anim/animation"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:id="@+id/feedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/addressbook"
+                    android:padding="15dp"
+                    android:fontFamily="@font/ubuntul"
+                    android:text="Send Feedback"
+                    android:textSize="20dp"/>
+
+                <View
+                    android:layout_below="@id/feedback"
+                    android:id="@+id/belowsendfeedbackdivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/listDivider" />
+
+
+
+
+                <TextView
+                    android:id="@+id/rateplaystore"
+                    android:stateListAnimator="@anim/animation"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:padding="12dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="Rate us on the Play Store"
+                    android:fontFamily="@font/ubuntul"
+                    android:layout_below="@+id/feedback"/>
+
+                <View
+                    android:id="@+id/belowrateusdivider"
+                    android:layout_below="@id/rateplaystore"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/listDivider" />
+
+
+
+
+                <TextView
+                    android:id="@+id/about"
+                    android:stateListAnimator="@anim/animation"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:padding="15dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="Help"
+                    android:fontFamily="@font/ubuntul"
+                    android:layout_below="@+id/rateplaystore"/>
+
+                <View
+                    android:id="@+id/belowabout"
+                    android:layout_below="@id/about"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/listDivider" />
+
+                <TextView
+                    android:stateListAnimator="@anim/animation"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:id="@+id/share"
+                    android:layout_width="match_parent"
+                    android:padding="15dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="Share App"
+                    android:fontFamily="@font/ubuntul"
+                    android:layout_below="@+id/about"/>
+
+                <View
+                    android:layout_below="@id/share"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/listDivider" />
+
+
+
+                <TextView
+                    android:id="@+id/logouttext"
+                    android:stateListAnimator="@anim/animation"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:padding="15dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/share"
+                    android:textSize="20dp"
+                    android:text="Logout"
+                    android:fontFamily="@font/ubuntul" />
+
+            </RelativeLayout>
+
+
+        </ScrollView>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

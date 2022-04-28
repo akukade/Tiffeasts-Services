@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Uploadtiffin"
+    android:padding="3dp">
+
+
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/vendorname"
+            app:met_underlineColor="@color/yellow"
+            app:met_floatingLabel="none"
+            app:met_floatingLabelAlwaysShown="false"
+            android:textStyle="bold"
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu"
+            android:hint="Your Name"
+            android:background="@null"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:inputType="textCapSentences"
+            android:textColor="@color/yellow"/>
+
+
+    <View
+        android:id="@+id/belowvendor"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/vendorname"
+        android:background="?android:attr/listDivider" />
+
+    <LinearLayout
+        android:id="@+id/subtab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/belowvendor">
+
+    <androidx.cardview.widget.CardView
+        android:stateListAnimator="@anim/animation"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:id="@+id/detailstab"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_below="@+id/belowvendor"
+        android:padding="20dp"
+        android:elevation="200dp"
+        android:focusable="true">
+
+        <RelativeLayout
+            android:id="@+id/rel1"
+            android:outlineSpotShadowColor="@color/black"
+            android:outlineAmbientShadowColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:gravity="center"
+                android:padding="3dp"
+                android:id="@+id/name"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:textSize="18sp"
+                android:fontFamily="@font/ubuntu"
+                android:text="DETIALS"
+                android:textColor="@color/yellow"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:stateListAnimator="@anim/animation"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:id="@+id/menutab"
+        android:layout_toEndOf="@+id/detailstab"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/belowvendor"
+        android:padding="20dp"
+        android:elevation="200dp"
+        android:focusable="true">
+
+        <RelativeLayout
+            android:id="@+id/rel2"
+            android:outlineSpotShadowColor="@color/black"
+            android:outlineAmbientShadowColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textAlignment="center"
+                android:gravity="center"
+                android:padding="3dp"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu"
+                android:layout_width="match_parent"
+                android:textSize="18sp"
+                android:text="MENU"
+                android:textColor="@color/yellow"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_margin="5dp"
+        android:id="@+id/detailsscroll"
+        android:layout_below="@+id/subtab"
+        android:layout_above="@+id/upload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/rellaydetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RatingBar
+                android:id="@+id/ratingbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/uptif"
+                android:numStars="5"
+                android:layout_margin="5dp"
+                android:visibility="gone"
+                android:rating="0"/>
+
+            <Button
+                android:id="@+id/rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ratingbar"
+                android:text="Rate Now"
+                android:layout_margin="5dp"
+                android:textSize="20dp"
+                android:visibility="gone"
+                android:background="@drawable/custom_button"
+                />
+
+            <!--<TextView
+                android:typeface="monospace"
+                android:id="@+id/costfor2title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_below="@+id/rate"
+                android:text="Cost for two"
+                android:textSize="18dp"
+                android:textColor="@color/black"/ -->
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/costfor2"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelTextColor="@color/black"
+                android:textStyle="bold"
+                app:met_floatingLabelAnimating="true"
+                app:met_floatingLabelTextSize="17dp"
+                app:met_textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:layout_marginTop="7dp"
+                app:met_underlineColor="@color/yellow"
+                android:hint="Cost for two"
+                android:textColorHint="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rate"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="20dp"
+                android:fontFamily="@font/ubuntul"
+                android:inputType="number"
+                />
+
+            <!--<TextView
+                android:typeface="monospace"
+                android:id="@+id/cuisinetitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Cuisine"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_below="@+id/costfor2"/>-->
+
+
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/cuisine"
+                    app:met_textColorHint="@color/black"
+                    app:met_floatingLabel="normal"
+                    app:met_floatingLabelTextColor="@color/black"
+                    android:textStyle="bold"
+                    app:met_floatingLabelAnimating="true"
+                    app:met_floatingLabelTextSize="17dp"
+                    app:met_underlineColor="@color/yellow"
+                    android:editable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:layout_marginTop="7dp"
+                    android:background="@null"
+                    android:focusableInTouchMode="true"
+                    android:textColor="@color/black"
+                    android:hint="Cuisine"
+                    android:textColorHint="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/costfor2"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/ubuntul"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="20dp" />
+
+            <!--<TextView
+                android:typeface="monospace"
+                android:id="@+id/menu_time"
+                android:layout_below="@id/cuisine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Open from (time): "
+                android:textColor="@color/black"
+                android:textSize="18sp"-->
+                />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/openingtime"
+                app:met_textColorHint="@color/black"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelTextColor="@color/black"
+                app:met_floatingLabelAnimating="true"
+                app:met_floatingLabelTextSize="17dp"
+                android:textStyle="bold"
+                android:layout_marginTop="7dp"
+                android:layout_width="wrap_content"
+                app:met_underlineColor="@color/yellow"
+                android:editable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cuisine"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:hint="Opening Time"
+                android:inputType="datetime"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:fontFamily="@font/ubuntul"
+                />
+
+            <TextView
+                android:id="@+id/to2"
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cuisine"
+                android:layout_toRightOf="@+id/openingtime"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="10dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/ubuntul"
+                android:text="from"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:gravity="center_horizontal" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/closingtime"
+                app:met_textColorHint="@color/black"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelTextColor="@color/black"
+                app:met_floatingLabelAnimating="true"
+                app:met_floatingLabelTextSize="17dp"
+                android:textStyle="bold"
+                android:layout_marginTop="7dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:met_underlineColor="@color/yellow"
+                android:layout_below="@+id/cuisine"
+                android:layout_toRightOf="@+id/to2"
+                android:layout_marginLeft="20dp"
+                android:editable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/ubuntul"
+                android:hint="Closing time"
+                android:inputType="datetime"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                />
+
+            <TextView
+                android:id="@+id/order_prior"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Order in Advance:"
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/ubuntul"
+                android:layout_below="@+id/closingtime" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/days"
+                android:text="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/order_prior"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/ubuntul"
+                android:hint="Days"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelAnimating="true"
+                app:met_floatingLabelTextColor="@color/black"
+                app:met_floatingLabelTextSize="17dp"
+                app:met_underlineColor="@color/yellow"
+                android:gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/day_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="25dp"
+                android:layout_toRightOf="@+id/days"
+                android:fontFamily="@font/ubuntu"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:text=":"
+                android:layout_below="@+id/order_prior">
+            </TextView>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/hrs"
+                android:text="0"
+                android:hint="Hours"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelTextColor="@color/black"
+                app:met_floatingLabelAnimating="true"
+                app:met_floatingLabelTextSize="17dp"
+                app:met_underlineColor="@color/yellow"
+                android:textStyle="bold"
+                android:layout_marginLeft="25dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/day_textview"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:fontFamily="@font/ubuntul"
+                android:inputType="number"
+                android:layout_below="@+id/order_prior"
+                android:gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/hrs_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/hrs"
+                android:textColor="@color/black"
+                android:layout_marginTop="22dp"
+                android:layout_marginLeft="25dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/ubuntu"
+                android:textSize="20dp"
+                android:text=":"
+                android:layout_below="@+id/order_prior">
+            </TextView>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/mins"
+                android:hint="Mins"
+                android:text="0"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelTextColor="@color/black"
+                app:met_floatingLabelAnimating="true"
+                app:met_floatingLabelTextSize="17dp"
+                app:met_underlineColor="@color/yellow"
+                android:layout_marginLeft="25dp"
+                android:textStyle="bold"
+                android:gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/hrs_textview"
+                android:fontFamily="@font/ubuntul"
+                android:textSize="20dp"
+                android:inputType="number"
+                android:layout_below="@+id/order_prior"/>
+
+            <!--<TextView
+                android:typeface="monospace"
+                android:id="@+id/min_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@+id/mins"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:text="Minutes"
+                android:layout_below="@+id/order_prior">
+            </TextView>-->
+
+           <!-- <TextView
+                android:id="@+id/ta"
+                android:typeface="monospace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:textSize="18dp"
+                android:layout_below="@+id/days">
+            </TextView>-->
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/address"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelTextColor="@color/black"
+                android:textStyle="bold"
+                app:met_floatingLabelAnimating="true"
+                app:met_floatingLabelTextSize="17dp"
+                app:met_textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:hint="Address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="12dp"
+                android:textSize="20dp"
+                app:met_underlineColor="@color/yellow"
+                android:editable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:fontFamily="@font/ubuntul"
+                android:layout_below="@+id/days"/>
+
+            <ProgressBar
+                android:id="@+id/addprogress"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/address"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/userdistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/deliveryLayout"
+                android:visibility="gone"
+                android:textSize="20dp"
+                android:fontFamily="@font/ubuntul"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="7dp"
+                android:text="Your Distance"
+                android:textColor="@color/black"
+                />
+
+            <CheckBox
+                android:id="@+id/delivery"
+                android:layout_below="@id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Delivery"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="7dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:fontFamily="@font/ubuntul"
+                android:textColor="@color/black">
+            </CheckBox>
+
+            <CheckBox
+                android:id="@+id/takeaway"
+                android:layout_below="@id/userdistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="7dp"
+                android:text="Takeaway"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:fontFamily="@font/ubuntul"
+                android:textColor="@color/black"
+                android:layout_marginLeft="5dp">
+            </CheckBox>
+
+            <CheckBox
+                android:id="@+id/veg"
+                android:layout_below="@id/takeaway"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Veg"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="7dp"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:fontFamily="@font/ubuntul"
+                android:textColor="@color/black">
+            </CheckBox>
+
+            <CheckBox
+                android:id="@+id/nonveg"
+                android:layout_below="@id/takeaway"
+                android:layout_toEndOf="@+id/veg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_toRightOf="@+id/veg"
+                android:layout_marginBottom="7dp"
+                android:text="Non-Veg"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:fontFamily="@font/ubuntul"
+                android:textColor="@color/black">
+            </CheckBox>
+
+
+            <RelativeLayout
+                android:id="@+id/deliveryLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/delivery"
+                android:visibility="gone">
+
+                <!--<TextView
+                    android:id="@+id/rangetitle"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntul"
+                    android:textStyle="bold"
+                    android:text="Delivery Range : "
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:visibility="visible"/>-->
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/range"
+                    app:met_floatingLabel="normal"
+                    app:met_floatingLabelTextColor="@color/black"
+                    app:met_floatingLabelAnimating="true"
+                    app:met_underlineColor="@color/yellow"
+                    android:layout_marginLeft="10dp"
+                    app:met_floatingLabelTextSize="17dp"
+                    app:met_textColorHint="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntul"
+                    android:textStyle="bold"
+                    android:inputType="numberDecimal"
+                    android:hint="Delivery Range"
+                    android:textSize="20dp"
+                    android:visibility="visible"/>
+
+                <!--<TextView
+                    android:id="@+id/freedelititle"
+                    android:layout_below="@+id/rangetitle"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntul"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:text="Free Delivery : "
+                    android:textColor="@color/black"
+                    android:visibility="visible"/>-->
+
+                <TextView
+                    android:id="@+id/chargetitle"
+                    android:layout_below="@+id/range"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntul"
+                    android:layout_marginTop="15dp"
+                    android:text="Charge per km for delivery: "
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:visibility="visible"/>
+
+                <EditText
+                    android:id="@+id/charge"
+                    android:textColorHint="@color/black"
+                    android:layout_below="@+id/range"
+                    android:layout_toEndOf="@+id/chargetitle"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntul"
+                    android:textStyle="bold"
+                    android:inputType="numberDecimal"
+                    android:hint="Rs per km"
+                    android:textSize="20dp"
+                    android:visibility="visible"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <ScrollView
+        android:layout_margin="5dp"
+        android:id="@+id/menuscroll"
+        android:layout_below="@+id/subtab"
+        android:layout_above="@id/upload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rellaymenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:stateListAnimator="@anim/animation"
+                android:foreground="?attr/selectableItemBackground"
+                android:id="@+id/select_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/yellow"
+                android:fontFamily="@font/ubuntu"
+                android:textAllCaps="false"
+                android:text="Click to upload image (Optional)"
+                android:textAlignment="center"
+                android:background="@drawable/custom_button_black"
+                android:layout_margin="10dp"/>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/display_image"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/select_image"
+                android:visibility="gone"
+                android:layout_centerHorizontal="true"/>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/dots"
+                android:layout_below="@+id/display_image"
+                android:layout_width="match_parent"
+                android:layout_height="14dp"
+                app:tabBackground="@drawable/tab_selector"
+                app:tabGravity="center"
+                app:tabIndicatorHeight="0dp"
+                android:visibility="visible"/>
+
+            <TextView
+                android:id="@+id/menu"
+                android:textColor="@color/black"
+                android:text="Click to add items in menu"
+                android:fontFamily="@font/ubuntul"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dots"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="20sp" />
+
+
+            <com.example.bookmytiffin.speciallistview
+                android:id="@+id/itempricelv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/menu"
+                android:layout_margin="7dp">
+            </com.example.bookmytiffin.speciallistview>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <Button
+        android:stateListAnimator="@anim/animation"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:id="@+id/upload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_button"
+        android:text="Upload"
+        android:fontFamily="@font/ubuntu"
+        android:textColor="@color/black"
+        android:textAllCaps="false"
+        android:layout_margin="5dp"
+        android:layout_alignParentBottom="true"
+        android:focusable="true" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/knife"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:visibility="invisible"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:foregroundGravity="center"
+        app:lottie_rawRes="@raw/uploadingmenunew"
+        app:lottie_loop="true"
+        app:lottie_repeatCount="10" />
+
+    <ru.dimorinny.floatingtextbutton.FloatingTextButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/upload"
+        android:elevation="100dp"
+        android:id="@+id/deleteupload"
+        android:padding="0dp"
+        app:floating_title="Delete"
+        android:layout_marginEnd="10dp"
+        android:layout_alignParentEnd="true"
+        app:floating_background_color="@color/black"
+        app:floating_title_color="@color/yellow"
+        android:visibility="gone">
+    </ru.dimorinny.floatingtextbutton.FloatingTextButton>
+
+
+</RelativeLayout>

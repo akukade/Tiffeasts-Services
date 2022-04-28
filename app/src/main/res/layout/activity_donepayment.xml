@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Donepayment">
+
+    <TextView
+        android:id="@+id/paymentsuccesstext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Payment Successful"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/ubuntu"
+        android:textColor="@color/black"
+        android:textSize="40dp">
+    </TextView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/paycard"
+        android:layout_below="@id/paymentsuccesstext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:elevation="200dp"
+        android:padding="10dp"
+        android:background="@color/yellow"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:background="@color/yellow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_margin="10dp"
+                android:id="@+id/orderid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Order Id"
+                android:fontFamily="@font/ubuntul"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:id="@+id/namevendor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vendor Name -"
+                android:layout_below="@+id/orderid"
+                android:fontFamily="@font/ubuntul"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:layout_toRightOf="@+id/namevendor"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_margin="10dp"
+                android:id="@+id/vendorname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Vendor Name"
+                android:layout_below="@+id/orderid"
+                android:fontFamily="@font/ubuntul"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:id="@+id/vendornumber"
+                android:layout_margin="10dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Vendor contact number"
+                android:layout_below="@id/vendorname"
+                android:textSize="20sp"/>
+
+
+            <TextView
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_margin="10dp"
+                android:layout_below="@id/vendornumber"
+                android:id="@+id/amountpaid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Amount Paid"
+                android:fontFamily="@font/ubuntul"
+                android:textSize="20dp"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Please take a screenshot of the following if needed.\n\nCheck MyOrders for your order details"
+        android:layout_below="@+id/paycard"
+        android:fontFamily="@font/ubuntul"
+        android:textColor="@color/black"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        app:lottie_rawRes="@raw/donepayment"
+        android:id="@+id/successpayment"
+        android:layout_below="@id/paycard"
+        android:layout_marginTop="30dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true">
+    </com.airbnb.lottie.LottieAnimationView>
+
+    <Button
+        android:id="@+id/nexthomepage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:text="Home page"
+        android:textSize="17sp"
+        android:background="@drawable/custom_button"
+        />
+
+</RelativeLayout>

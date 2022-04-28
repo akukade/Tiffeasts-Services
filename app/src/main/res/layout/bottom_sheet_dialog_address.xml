@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/enteraddressdetails"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Address Details"
+            android:textColor="@color/black"
+            android:fontFamily="@font/ubuntu"
+            android:textSize="25dp"/>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/yourlocation"
+            android:layout_below="@id/enteraddressdetails"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="20dp"
+            android:textColorHint="@color/black"
+            app:hintAnimationEnabled="true"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="375dp"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/yourlocation1"
+                android:editable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:fontFamily="@font/ubuntul"
+                android:background="@color/shake_sdk_transparent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Your Location"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:textColorHint="@color/black"/>
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/completeaddress"
+            android:layout_below="@id/yourlocation"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:textColorHint="@color/black"
+            app:hintAnimationEnabled="true"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="375dp"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/completeaddress1"
+                android:fontFamily="@font/ubuntul"
+                android:background="@color/shake_sdk_transparent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="House no./ Flat no./ Floor/ Building"
+                android:inputType="textPostalAddress"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:textColorHint="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/landmark"
+            android:layout_below="@id/completeaddress"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:textColorHint="@color/black"
+            app:hintAnimationEnabled="true"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="375dp"
+            android:layout_height="60dp">
+
+            <EditText
+                android:id="@+id/landmark1"
+                android:fontFamily="@font/ubuntul"
+                android:background="@color/shake_sdk_transparent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Landmark"
+                android:inputType="textPostalAddress"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:textColorHint="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/livelocation"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/landmark"
+            android:layout_width="300dp"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:text="Add Address"
+            android:textColor="@color/yellow"
+            android:background="@drawable/round_button"/>
+
+
+        <Button
+            android:id="@+id/addaddressbutton"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/landmark"
+            android:layout_width="300dp"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:text="Add Address"
+            android:textColor="@color/yellow"
+            android:background="@drawable/round_button"/>
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

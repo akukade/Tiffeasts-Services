@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/homerelative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textColor="@color/black"
+        android:fontFamily="@font/ubuntu"
+        android:layout_margin="10dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="40dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/infotext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Info"
+        android:textColor="@color/black"
+        android:layout_below="@id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:fontFamily="@font/ubuntul"/>
+
+
+    <ImageView
+        android:layout_margin="5dp"
+        android:background="@drawable/ic_baseline_location_on_24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/infotext"
+        android:id="@+id/locationbutton">
+
+    </ImageView>
+
+
+    <TextView
+        android:padding="5dp"
+        android:layout_toRightOf="@id/locationbutton"
+        android:maxLines="2"
+        android:layout_below="@id/infotext"
+        android:background="@drawable/textviewborder"
+        android:id="@+id/loc"
+        android:fontFamily="@font/ubuntul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your Location"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_margin="5dp"
+        android:textSize="15sp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"/>
+
+    <ImageButton
+        android:visibility="gone"
+        android:stateListAnimator="@anim/animation"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:layout_margin="5dp"
+        android:id="@+id/searchbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:background="@drawable/ic_baseline_search_24"
+        android:layout_below="@+id/loc"
+        android:layout_alignParentEnd="true"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputsearch"
+        android:layout_margin="5dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_toLeftOf="@id/filterandsort"
+        android:layout_below="@id/loc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:drawableLeft="@drawable/ic_baseline_search_24"
+            android:id="@+id/searchtext"
+            android:fontFamily="@font/ubuntul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="\t\t\t\t Name, Cuisine, Dish"
+            android:inputType="textAutoComplete"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:layout_below="@+id/loc" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <ImageButton
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/loc"
+        android:elevation="100dp"
+        android:background="@drawable/ic_baseline_sort_24"
+        android:id="@+id/filterandsort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:fontFamily="@font/ubuntu"
+        android:textColor="@color/black">
+    </ImageButton>
+
+    <!--<Button
+        android:elevation="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/logouthomefrag"
+        android:textAllCaps="false"
+        android:text="Logout"
+        android:background="@drawable/custom_button"
+        android:textColor="@color/black"
+        android:fontFamily="@font/ubuntu"
+        android:layout_margin="5dp"/>
+
+
+</LinearLayout>
+
+</HorizontalScrollView>-->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        app:elevation="100dp"
+        android:id="@+id/upload"
+        android:src="@drawable/ic_baseline_cloud_upload_24_yellow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        app:fabSize="normal"
+        android:elevation="6dp"
+        android:layout_alignParentBottom="true">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/whatsapp"
+        app:elevation="100dp"
+        android:visibility="gone"
+        android:stateListAnimator="@anim/animation"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:src="@drawable/ic_baseline_message_24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:fabSize="normal"
+        android:elevation="100dp"
+        android:layout_alignParentBottom="true"
+        android:contentDescription="TODO">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+
+    <ru.dimorinny.floatingtextbutton.FloatingTextButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:elevation="100dp"
+        android:id="@+id/joinus"
+        app:floating_title="Join Us"
+        android:layout_alignParentRight="true"
+        app:floating_background_color="@color/black"
+        app:floating_title_color="@color/yellow">
+    </ru.dimorinny.floatingtextbutton.FloatingTextButton>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/inputsearch"
+        android:id="@+id/homerecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical" />
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        style="@style/Widget.AppCompat.ProgressBar" />
+
+    <RelativeLayout
+        android:layout_centerHorizontal="true"
+        android:id="@+id/emp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/emptyImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/ic_problem1"
+            android:visibility="invisible"
+            android:contentDescription="Nothing to show" />
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/emptyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emp"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/ubuntu"
+        android:text="Nothing To Show Here"
+        android:textColor="@color/black"
+        android:visibility="invisible"/>
+    
+</RelativeLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.bookmytiffin">
+
+    <application
+        android:name=".Current_Location"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:logo="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
+        <activity android:name=".HereSearch"></activity>
+        <activity android:name=".Addressbook" />
+        <activity android:name=".VerifyOTP" />
+        <activity android:name=".SendOTP" />
+        <activity android:name=".Donepayment" />
+        <activity android:name=".Faq" />
+        <activity android:name=".Orderotp" />
+        <activity android:name=".About" />
+        <activity android:name=".Feedback" />
+        <activity
+            android:name=".Customlocation"
+            android:label="@string/title_activity_customlocation" />
+        <activity android:name=".Selection" />
+        <activity android:name=".Uploadtiffin" />
+        <activity android:name=".Register" />
+        <activity android:name=".Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".Userdetails" />
+        <activity android:name=".Payment" />
+
+        <meta-data
+            android:name="com.shakebugs.APIClientID"
+            android:value="A7WFc02aPRsEJsypOPK6gvFLgZ7Yxqi7mOj9sBha" />
+        <meta-data
+            android:name="com.shakebugs.APIClientSecret"
+            android:value="SbvwZJtG1G8m54KAHZDf20jVLTc3fLRdlovKfRxB2rhJEOgdSmrJxWR" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="com.here.sdk.access_key_id"
+            android:value="W2FoMI5NoO7k9q5wcJbz9Q" />
+        <meta-data
+            android:name="com.here.sdk.access_key_secret"
+            android:value="XMzRCzZVZ42Gkj3BsAG_yDmkIGeMOtxAwZYVcbWKbY2WLoKU5UJ3jmmZhOguug1sc_-CQMu6gXBCg-FLTDEEyw" />
+
+        <service
+            android:name="com.tiffeasts.services.MyFirebaseInstanceIDService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.tiffeasts.services.MyFirebaseMessagingService"
+            android:enabled="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+    </application>
+
+    <uses-feature android:name="android.hardware.location.gps" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+</manifest>

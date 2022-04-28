@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/card"
+    android:stateListAnimator="@anim/animation"
+    android:foreground="?attr/selectableItemBackground"
+    android:clickable="true"
+    app:cardPreventCornerOverlap="false"
+    app:cardUseCompatPadding="true"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    card_view:cardCornerRadius="10dp"
+    android:layout_margin="7dp"
+    android:layout_marginBottom="50dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="200dp">
+
+    <RelativeLayout
+        android:outlineSpotShadowColor="@color/black"
+        android:outlineAmbientShadowColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/homeimage"
+            android:layout_width="match_parent"
+            android:layout_height="214dp"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/name"
+            android:padding="3dp"
+            android:inputType="textNoSuggestions"
+            android:layout_below="@+id/homeimage"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="22dp"
+            android:text="Name"
+            android:fontFamily="@font/ubuntu"
+            android:textColor="@color/yellow"/>
+
+        <TextView
+            android:padding="3dp"
+            android:id="@+id/ratingstar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/homeimage"
+            android:layout_toEndOf="@+id/name"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:textSize="22sp"
+            android:layout_marginBottom="10dp"
+            android:text="\u2605"
+            android:fontFamily="@font/ubuntu"
+            android:textColor="@color/black"
+            />
+
+        <View
+            android:layout_marginBottom="5dp"
+            android:layout_below="@id/name"
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:padding="3dp"
+            android:id="@+id/cuisine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/cuisinetitle"
+            android:layout_below="@+id/divider2"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="5dp"
+            android:text="Cuisine"
+            android:fontFamily="@font/ubuntul"
+            android:textStyle="bold"
+            android:textSize="17dp"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:padding="3dp"
+            android:id="@+id/HomeCostfor2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cuisine"
+            android:fontFamily="@font/ubuntul"
+            android:layout_marginStart="4dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp"
+            android:textSize="17dp"
+            android:textColor="@color/black"
+            android:text="Rs 50 for 2"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+

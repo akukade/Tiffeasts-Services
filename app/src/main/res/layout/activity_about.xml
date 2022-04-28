@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".About">
+
+    <TextView
+        android:padding="15dp"
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HELP"
+        android:fontFamily="@font/ubuntu"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        android:layout_margin="10dp">
+
+    </TextView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_below="@id/info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:elevation="200dp"
+        android:padding="10dp"
+        android:background="@color/yellow"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:background="@color/yellow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <TextView
+                android:stateListAnimator="@anim/animation"
+                android:foreground="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:id="@+id/infoaboutus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="About Us"
+                android:textSize="20dp"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:fontFamily="@font/ubuntul">
+
+            </TextView>
+
+            <View
+                android:layout_below="@id/infoaboutus"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:textStyle="bold"
+                android:stateListAnimator="@anim/animation"
+                android:foreground="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp"
+                android:id="@+id/help"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/infoaboutus"
+                android:text="Faq's"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:padding="10dp"
+                android:fontFamily="@font/ubuntul">
+            </TextView>
+
+            <View
+                android:layout_below="@id/help"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:textStyle="bold"
+                android:stateListAnimator="@anim/animation"
+                android:foreground="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp"
+                android:textColor="@color/black"
+                android:id="@+id/terms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/help"
+                android:text="Terms of Service"
+                android:textSize="20dp"
+                android:padding="10dp"
+                android:fontFamily="@font/ubuntul">
+            </TextView>
+
+            <View
+                android:layout_below="@id/terms"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:textStyle="bold"
+                android:stateListAnimator="@anim/animation"
+                android:foreground="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_margin="10dp"
+                android:textColor="@color/black"
+                android:id="@+id/contactus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/terms"
+                android:text="Contact Us"
+                android:textSize="20dp"
+                android:padding="10dp"
+                android:fontFamily="@font/ubuntul">
+            </TextView>
+
+            <View
+                android:layout_below="@id/contactus"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</RelativeLayout>

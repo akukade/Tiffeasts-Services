@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Addressbook">
+
+    <TextView
+        android:id="@+id/myaddresses"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:padding="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Addresses"
+        android:textColor="@color/black"
+        android:fontFamily="@font/ubuntu"
+        android:textSize="40dp"/>
+
+    <ImageView
+        android:id="@+id/addaddressimage"
+        android:background="@drawable/addimage"
+        android:layout_below="@id/myaddresses"
+        android:layout_marginTop="20dp"
+        android:padding="5dp"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginLeft="20dp"
+        android:stateListAnimator="@anim/animation"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true">
+
+    </ImageView>
+
+
+    <TextView
+        android:id="@+id/addaddress"
+        android:layout_below="@id/myaddresses"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/addaddressimage"
+        android:padding="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Address"
+        android:textColor="@color/black"
+        android:fontFamily="@font/ubuntul"
+        android:textSize="20dp"
+        android:stateListAnimator="@anim/animation"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"/>
+
+    <View
+        android:id="@+id/addaddressview"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/addaddress"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+
+
+
+    <TextView
+        android:id="@+id/addresstext1"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/addaddressview"
+        android:layout_marginLeft="20dp"
+        android:padding="5dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Shop No. 1 and 2, Paud Road, Opp. Vanaz Company, New Friends Society, Kothrud, Pune, Maharashtra 411038"
+        android:textColor="@color/black"
+        android:fontFamily="@font/ubuntul"
+        android:textSize="20dp"/>
+
+
+    <ImageView
+        android:id="@+id/more"
+        android:src="@drawable/more24"
+        android:layout_marginStart="370dp"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/addaddress"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:stateListAnimator="@anim/animation"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true">
+
+    </ImageView>
+
+    <View
+        android:id="@+id/belowaddress"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/addresstext1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+
+
+    <ImageView
+        android:id="@+id/more2"
+        android:src="@drawable/more24"
+        android:layout_marginStart="370dp"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/belowaddress"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:stateListAnimator="@anim/animation"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"/>
+
+    <TextView
+        android:id="@+id/addresstext2"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/belowaddress"
+        android:layout_marginLeft="20dp"
+        android:padding="5dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Shop No. 1 and 2, Paud Road, Opp. Vanaz Company, New Friends Society, Kothrud, Pune, Maharashtra 411038"
+        android:textColor="@color/black"
+        android:fontFamily="@font/ubuntul"
+        android:textSize="20dp"/>
+
+    <View
+        android:id="@+id/belowaddress2"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/addresstext2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+
+
+    <Button
+        android:id="@+id/nextaddressbutton"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/belowaddress2"
+        android:text="Save and Proceed"
+        android:textColor="@color/yellow"
+        android:background="@drawable/round_button"
+        android:layout_centerHorizontal="true"/>
+
+
+
+
+
+
+
+
+</RelativeLayout>
